@@ -1,0 +1,10 @@
+0 Сеанс 0 
+1 Выйти 0 Quit
+0 Расписание 0 Table
+0 Список 0 
+1 Группы 0 GroupTable
+0 Стипендия 0 
+1 Академическая 0 AcademicScholarship
+1 Социальная 0 SocialScholarship
+1 Повышенная 1 IncreasedScholarship
+0 О_программе 0 About
