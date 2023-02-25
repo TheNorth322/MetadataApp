@@ -46,6 +46,8 @@ public class LogInViewModel : ViewModelBase
     {
         try
         {
+            Authenticator authenticator = new Authenticator();
+            authenticator.LogIn(Login, Password);
         }
         catch (Exception ex)
         {

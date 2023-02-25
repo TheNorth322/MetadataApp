@@ -68,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677289137426</updated>
-      <workItem from="1677289138567" duration="6180000" />
+      <workItem from="1677289138567" duration="10250000" />
     </task>
     <servers />
   </component>
@@ -79,5 +79,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MetadataApp/Domain/Authenticator.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Users\thenorth\RiderProjects\MetadataApp\MetadataApp\Domain\Authenticator.cs" initialLine="13" containingFunctionPresentation="method 'LogIn'">
+            <startOffsets>
+              <option value="378" />
+            </startOffsets>
+            <endOffsets>
+              <option value="447" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

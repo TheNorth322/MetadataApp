@@ -15,8 +15,4 @@
         </Page>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="UserData" />
-    </ItemGroup>
-
 </Project>
