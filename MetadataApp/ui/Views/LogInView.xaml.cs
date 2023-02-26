@@ -11,6 +11,7 @@ public partial class LogInView : Window
     public LogInView()
     {
         InitializeComponent();
+        Loaded += ViewLoaded; 
         this.DataContext = new LogInViewModel();
         (DataContext as LogInViewModel).MessageBoxRequest +=
             ViewMessageBoxRequest;
@@ -18,5 +19,13 @@ public partial class LogInView : Window
     private void ViewMessageBoxRequest(object sender, MessageBoxEventArgs e)
     {
         e.Show();
+    }
+
+    private void ViewLoaded(object sender, RoutedEventArgs e)
+    {
+        if (DataContext is ICloseWindow vm)
+        {
+            vm.Close += () => { Close(); };
+        } 
     }
 }

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using MetadataApp.Domain;
+using MetadataApp.ui.Views;
 
 namespace MetadataApp.ui.ViewModels;
 
-public class LogInViewModel : ViewModelBase
+public class LogInViewModel : ViewModelBase , ICloseWindow
 {
     private string _login;
 
@@ -47,7 +49,11 @@ public class LogInViewModel : ViewModelBase
         try
         {
             Authenticator authenticator = new Authenticator();
-            authenticator.LogIn(Login, Password);
+            StreamReader streamReader = authenticator.LogIn(Login, Password);
+            ConfigurationParser configurationParser = new ConfigurationParser();
+            OpenNewView(new MainView(new MainViewModel(configurationParser.Parse(streamReader))));
+            
+            Close?.Invoke();
         }
         catch (Exception ex)
         {
@@ -59,4 +65,6 @@ public class LogInViewModel : ViewModelBase
     {
         return true;
     }
+
+    public Action Close { get; set; }
 }

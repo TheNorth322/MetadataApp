@@ -8,6 +8,7 @@ public class ViewModelBase : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
     public event EventHandler<MessageBoxEventArgs> MessageBoxRequest;
+    public event EventHandler<OpenViewEventArgs> OpenNewWindow;
     public event EventHandler CloseEvent;
 
     protected void MessageBox_Show(Action<MessageBoxResult> resultAction, string messageBoxText,
@@ -19,12 +20,16 @@ public class ViewModelBase : INotifyPropertyChanged
             new MessageBoxEventArgs(resultAction, messageBoxText, caption,
                 button, icon, defaultResult, options));
     }
-
+    
     protected virtual void OnPropertyChange(string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+    protected void OpenNewView(Window view)
+    {
+        OpenNewWindow?.Invoke(this, new OpenViewEventArgs(view)); 
+    }
     protected virtual void Dispose()
     {
     }
