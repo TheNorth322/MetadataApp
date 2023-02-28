@@ -1,28 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Windows;
+﻿using System.Windows;
+using MetadataApp.Domain.Interfaces;
 using MetadataApp.ui.ViewModels;
 
 namespace MetadataApp.Domain;
 
-public class HandlersInitializer
+public class HandlersInitializer : IHandlersInitializer
 {
-    private string[] Tags;
+    private readonly string[] Tags;
 
     public HandlersInitializer()
     {
-        Tags = new string[] { "TermTable", "Group1", "Group2", "Group3", "AVTF", "FGO", 
-            "About", "Quit", "Table", "GroupTable", "AcademicScholarship", 
-            "SocialScholarship", "IncreasedScholarship", 
-            "Secret", "WeekTable", "TermTable"};
+        Tags = new[]
+        {
+            "About", "TermTable", "Group1", "Group2", "Group3", "AVTF", "FGO",
+            "Quit", "Table", "GroupTable", "AcademicScholarship", "SocialScholarship",
+            "IncreasedScholarship", "Secret", "WeekTable", "TermTable"
+        };
     }
-    
+
     public Handler[] Initialize()
     {
-        Handler[] handlers = new Handler[Tags.Length];
-        
-        for (int i = 0; i < Tags.Length; i++)
-            handlers[i] = new Handler(Tags[i], (tag) => MessageBox.Show(tag));
-        
+        var handlers = new Handler[Tags.Length];
+
+        for (var i = 0; i < Tags.Length; i++)
+            handlers[i] = new Handler(Tags[i], tag => MessageBox.Show(tag));
+
         return handlers;
     }
 }

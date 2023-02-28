@@ -10,7 +10,7 @@ public class OpenViewEventArgs
     {
         _view = view;
     }
-    
+
     public void Show()
     {
         _view.Show();

@@ -18,6 +18,6 @@ public partial class App : Application
 
     private void OpenNewView(object sender, OpenViewEventArgs e)
     {
-        e.Show();    
+        e.Show();
     }
 }
