@@ -49,9 +49,9 @@ public class LogInViewModel : ViewModelBase, ICloseWindow
     {
         try
         {
-            var authentificator = new Authentificator(new FileDBConnection());
-            var userInfo = authentificator.LogIn(Login, Password);
-            var configurationParser = new ConfigurationParser();
+            Authentificator authentificator = new Authentificator(new FileDBConnection());
+            UserInfo userInfo = authentificator.LogIn(Login, Password);
+            ConfigurationParser configurationParser = new ConfigurationParser();
 
             OpenNewView(new MainView(new MainViewModel(configurationParser.Parse(userInfo.ConfigStream))));
             Close?.Invoke();

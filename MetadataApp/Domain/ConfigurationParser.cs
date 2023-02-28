@@ -10,16 +10,16 @@ public class ConfigurationParser : IConfigurationParser
 {
     public ObservableCollection<MenuItemViewModel> Parse(Stream stream)
     {
-        var streamReader = new StreamReader(stream);
-        var menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
-        var handlers = new HandlersInitializer().Initialize();
+        StreamReader streamReader = new StreamReader(stream);
+        ObservableCollection<MenuItemViewModel> menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
+        Handler[] handlers = new HandlersInitializer().Initialize();
 
         while (streamReader.ReadLine() is { } line)
         {
             bool visility = true, availability = true;
-            var configData = line.Split(' ');
+            string[] configData = line.Split(' ');
 
-            var localCollection = menuItemsCollection;
+            ObservableCollection<MenuItemViewModel> localCollection = menuItemsCollection;
 
             GetCollection(ref localCollection, Convert.ToInt32(configData[0]));
             ChangeStatus(Convert.ToInt32(configData[2]), ref availability, ref visility);
@@ -32,7 +32,7 @@ public class ConfigurationParser : IConfigurationParser
             }
             else
             {
-                var handler = GetHandler(handlers, configData[3]);
+                Handler handler = GetHandler(handlers, configData[3]);
                 localCollection[localCollection.Count - 1].Handler = handler;
             }
         }
@@ -43,7 +43,7 @@ public class ConfigurationParser : IConfigurationParser
 
     private Handler GetHandler(Handler[] handlers, string tag)
     {
-        foreach (var handler in handlers)
+        foreach (Handler handler in handlers)
             if (handler.Tag == tag)
                 return handler;
 
@@ -52,7 +52,8 @@ public class ConfigurationParser : IConfigurationParser
 
     private void GetCollection(ref ObservableCollection<MenuItemViewModel> collection, int hierarchyLevel)
     {
-        for (var i = 0; i < hierarchyLevel; i++) collection = collection[collection.Count - 1].MenuItems;
+        for (int i = 0; i < hierarchyLevel; i++) 
+            collection = collection[collection.Count - 1].MenuItems;
     }
 
     private void ChangeStatus(int flag, ref bool availability, ref bool visility)

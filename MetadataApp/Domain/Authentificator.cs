@@ -14,8 +14,8 @@ public class Authentificator : IAutentificator
 
     public UserInfo LogIn(string login, string password)
     {
-        var userInfo = _dbConnection.FindUserInfo(login);
-        var passwordHash = new PasswordHash();
+        UserInfo userInfo = _dbConnection.FindUserInfo(login);
+        PasswordHash passwordHash = new PasswordHash();
 
         if (passwordHash.Verify(password, userInfo.PasswordHash))
             return userInfo;

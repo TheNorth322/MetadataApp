@@ -11,9 +11,9 @@ public sealed class PasswordHash
 
     public void Hash(string password)
     {
-        var ue = new UnicodeEncoding();
-        var messageBytes = ue.GetBytes(password + _salt);
-        var shHash = SHA256.Create();
+        UnicodeEncoding ue = new UnicodeEncoding();
+        byte[] messageBytes = ue.GetBytes(password + _salt);
+        SHA256 shHash = SHA256.Create();
         _hash = BitConverter.ToString(shHash.ComputeHash(messageBytes));
     }
 

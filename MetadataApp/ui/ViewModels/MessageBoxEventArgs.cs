@@ -30,14 +30,14 @@ public class MessageBoxEventArgs
 
     public void Show()
     {
-        var messageBoxResult =
+        MessageBoxResult messageBoxResult =
             MessageBox.Show(messageBoxText, caption, button, icon, defaultResult, options);
         if (resultAction != null) resultAction(messageBoxResult);
     }
 
     public void Show(Window owner)
     {
-        var messageBoxResult =
+        MessageBoxResult messageBoxResult =
             MessageBox.Show(owner, messageBoxText, caption, button, icon, defaultResult, options);
         if (resultAction != null) resultAction(messageBoxResult);
     }

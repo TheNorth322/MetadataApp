@@ -20,9 +20,9 @@ public class HandlersInitializer : IHandlersInitializer
 
     public Handler[] Initialize()
     {
-        var handlers = new Handler[Tags.Length];
+        Handler[] handlers = new Handler[Tags.Length];
 
-        for (var i = 0; i < Tags.Length; i++)
+        for (int i = 0; i < Tags.Length; i++)
             handlers[i] = new Handler(Tags[i], tag => MessageBox.Show(tag));
 
         return handlers;
