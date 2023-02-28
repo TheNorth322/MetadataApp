@@ -14,5 +14,12 @@ public partial class MainView : Window
     {
         DataContext = vm;
         InitializeComponent();
+        (DataContext as MainViewModel).MessageBoxRequest +=
+            ViewMessageBoxRequest;
+    }
+
+    private void ViewMessageBoxRequest(object sender, MessageBoxEventArgs e)
+    {
+        e.Show();
     }
 }

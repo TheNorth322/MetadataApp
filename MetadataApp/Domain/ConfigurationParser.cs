@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Windows;
 using MetadataApp.ui.ViewModels;
 
 namespace MetadataApp.Domain;
@@ -11,7 +12,8 @@ public class ConfigurationParser
     {
         StreamReader streamReader = new StreamReader(stream);
         ObservableCollection<MenuItemViewModel> menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
-
+        Handler[] handlers = (new HandlersInitializer()).Initialize();
+        
         while (streamReader.ReadLine() is { } line)
         {
             bool visility = true, availability = true;
@@ -28,7 +30,8 @@ public class ConfigurationParser
                 localCollection[localCollection.Count - 1].MenuItems = new ObservableCollection<MenuItemViewModel>();
             else
             {
-                // СЮДА АБРАБОЧЕК В ПОСЛЕДНИЙ ЭЛЕМЕНТ ЛОКАЛ КОЛЕКШЕН
+                Handler handler = GetHandler(handlers, configData[3]);
+                localCollection[localCollection.Count - 1].Handler = handler;
             }
         }
         
@@ -36,6 +39,16 @@ public class ConfigurationParser
         return menuItemsCollection;
     }
 
+    private Handler GetHandler(Handler[] handlers, string tag)
+    {
+        foreach (Handler handler in handlers)
+        {
+            if (handler.Tag == tag) 
+                return handler;
+        }
+
+        throw new ApplicationException("No handlers were found");
+    }
     private void GetCollection(ref ObservableCollection<MenuItemViewModel> collection, int hierarchyLevel)
     {
         for (int i = 0; i < hierarchyLevel; i++)
