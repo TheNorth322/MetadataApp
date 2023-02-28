@@ -76,7 +76,9 @@
       <updated>1677289137426</updated>
       <workItem from="1677289138567" duration="10667000" />
       <workItem from="1677328471970" duration="2967000" />
-      <workItem from="1677395731341" duration="11498000" />
+      <workItem from="1677395731341" duration="11847000" />
+      <workItem from="1677504782407" duration="999000" />
+      <workItem from="1677577723275" duration="3709000" />
     </task>
     <servers />
   </component>
@@ -98,24 +100,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MetadataApp/Domain/PasswordHash.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\thenorth\RiderProjects\MetadataApp\MetadataApp\Domain\PasswordHash.cs" initialLine="21" containingFunctionPresentation="method 'Verify'">
-            <startOffsets>
-              <option value="576" />
-            </startOffsets>
-            <endOffsets>
-              <option value="591" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

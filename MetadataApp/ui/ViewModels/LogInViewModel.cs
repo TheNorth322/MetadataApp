@@ -48,11 +48,11 @@ public class LogInViewModel : ViewModelBase , ICloseWindow
     {
         try
         {
-            Authenticator authenticator = new Authenticator();
-            StreamReader streamReader = authenticator.LogIn(Login, Password);
+            Authenticator authenticator = new Authenticator(new FileDBConnection());
+            UserInfo userInfo = authenticator.LogIn(Login, Password);
             ConfigurationParser configurationParser = new ConfigurationParser();
-            OpenNewView(new MainView(new MainViewModel(configurationParser.Parse(streamReader))));
             
+            OpenNewView(new MainView(new MainViewModel(configurationParser.Parse(userInfo.ConfigStream))));
             Close?.Invoke();
         }
         catch (Exception ex)

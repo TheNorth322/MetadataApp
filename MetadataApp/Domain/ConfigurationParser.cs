@@ -7,19 +7,20 @@ namespace MetadataApp.Domain;
 
 public class ConfigurationParser
 {
-    public ObservableCollection<MenuItemViewModel> Parse(StreamReader streamReader)
+    public ObservableCollection<MenuItemViewModel> Parse(Stream stream)
     {
-        ObservableCollection<MenuItemViewModel> MenuItemsCollection = new ObservableCollection<MenuItemViewModel>();
+        StreamReader streamReader = new StreamReader(stream);
+        ObservableCollection<MenuItemViewModel> menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
 
         while (streamReader.ReadLine() is { } line)
         {
             bool visility = true, availability = true;
             string[] configData = line.Split(' ');
 
-            ObservableCollection<MenuItemViewModel> localCollection = MenuItemsCollection;
+            ObservableCollection<MenuItemViewModel> localCollection = menuItemsCollection;
 
-            GetCollection(Convert.ToInt32(configData[0]), ref localCollection);
-            ChangeStatus(Convert.ToInt32(configData[2]), ref availability, ref visility);        
+            GetCollection(ref localCollection, Convert.ToInt32(configData[0]));
+            ChangeStatus(Convert.ToInt32(configData[2]), ref availability, ref visility);
 
             localCollection.Add(new MenuItemViewModel(configData[1], visility, availability));
 
@@ -30,11 +31,12 @@ public class ConfigurationParser
                 // СЮДА АБРАБОЧЕК В ПОСЛЕДНИЙ ЭЛЕМЕНТ ЛОКАЛ КОЛЕКШЕН
             }
         }
-
-        return MenuItemsCollection;
+        
+        stream.Close();
+        return menuItemsCollection;
     }
 
-    private void GetCollection(int hierarchyLevel, ref ObservableCollection<MenuItemViewModel> collection)
+    private void GetCollection(ref ObservableCollection<MenuItemViewModel> collection, int hierarchyLevel)
     {
         for (int i = 0; i < hierarchyLevel; i++)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
@@ -8,23 +9,21 @@ namespace MetadataApp.Domain;
 
 public class Authenticator
 {
-    public StreamReader LogIn(string login, string password)
+    private IDBConnection _dbConnection;
+
+    public Authenticator(IDBConnection dbConnection)
     {
-        IStreamInitializer streamInitializer = new FileStreamInitializer();
-        StreamReader streamReader = streamInitializer.Initialize();
+        _dbConnection = dbConnection ?? throw new ArgumentNullException(nameof(dbConnection));
+    }
+
+    public UserInfo LogIn(string login, string password)
+    {
+        UserInfo userInfo = _dbConnection.FindUserInfo(login);
         PasswordHash passwordHash = new PasswordHash();
 
-        while (streamReader.ReadLine() is { } line)
-        {
-            string[] userData = line.Split(' ');
-            if (login == userData[0] && passwordHash.Verify(password, userData[1]))
-            {
-                if (!File.Exists(userData[2]))
-                    throw new FileNotFoundException($"File {userData[2]} isn't found");
-                return new StreamReader(new FileStream(userData[2], FileMode.Open));
-            }
-        }
-
+        if (passwordHash.Verify(password, userInfo.PasswordHash))
+            return userInfo; 
+        
         throw new ApplicationException("Wrong login/password");
     }
 }
