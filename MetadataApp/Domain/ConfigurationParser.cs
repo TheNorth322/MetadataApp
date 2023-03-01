@@ -14,11 +14,13 @@ public class ConfigurationParser : IConfigurationParser
         ObservableCollection<MenuItemViewModel> menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
         Handler[] handlers = new HandlersInitializer().Initialize();
 
+        ConfigLineValidator configLineValidator = new ConfigLineValidator();
         while (streamReader.ReadLine() is { } line)
         {
             bool visility = true, availability = true;
             string[] configData = line.Split(' ');
-
+            
+            configLineValidator.Validate(configData);
             ObservableCollection<MenuItemViewModel> localCollection = menuItemsCollection;
 
             GetCollection(ref localCollection, Convert.ToInt32(configData[0]));
