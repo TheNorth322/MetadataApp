@@ -32,13 +32,7 @@ public class MessageBoxEventArgs
     {
         MessageBoxResult messageBoxResult =
             MessageBox.Show(messageBoxText, caption, button, icon, defaultResult, options);
-        if (resultAction != null) resultAction(messageBoxResult);
-    }
-
-    public void Show(Window owner)
-    {
-        MessageBoxResult messageBoxResult =
-            MessageBox.Show(owner, messageBoxText, caption, button, icon, defaultResult, options);
-        if (resultAction != null) resultAction(messageBoxResult);
+        if (resultAction != null)
+            resultAction(messageBoxResult);
     }
 }

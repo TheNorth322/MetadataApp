@@ -34,7 +34,7 @@ public class FileDBConnection : IDBConnection
 
     private FileStream InitializeDatabase()
     {
-        string path = File.ReadLines("database_path.txt").First();
-        return new FileStream(path, FileMode.Open);
+        string _path = File.ReadLines(path).First();
+        return new FileStream(_path, FileMode.Open);
     }
 }

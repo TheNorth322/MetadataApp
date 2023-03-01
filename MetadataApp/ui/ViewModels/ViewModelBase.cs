@@ -21,12 +21,7 @@ public class ViewModelBase : INotifyPropertyChanged
                 button, icon, defaultResult, options));
     }
 
-    protected void MessageBox_Show(object sender, MessageBoxEventArgs e)
-    {
-        MessageBoxRequest?.Invoke(sender, e);
-    }
-
-    protected virtual void OnPropertyChange(string propertyName = null)
+    protected void OnPropertyChange(string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
@@ -36,7 +31,7 @@ public class ViewModelBase : INotifyPropertyChanged
         OpenNewWindow?.Invoke(this, new OpenViewEventArgs(view));
     }
 
-    protected virtual void Dispose()
+    protected void Dispose()
     {
     }
 }
