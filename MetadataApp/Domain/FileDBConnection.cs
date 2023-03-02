@@ -9,7 +9,11 @@ namespace MetadataApp.Domain;
 public class FileDBConnection : IDBConnection
 {
     private readonly string path = "database_path.txt";
-
+    private StreamCollection _streams;
+    public FileDBConnection(StreamCollection streams)
+    {
+        _streams = streams;
+    }
     public UserInfo FindUserInfo(string login)
     {
         FileStream fileStream = InitializeDatabase();
@@ -28,7 +32,7 @@ public class FileDBConnection : IDBConnection
                 throw new FileNotFoundException($"File {userData[2]} isn't found");
 
             FileStream configStream = new FileStream(userData[2], FileMode.Open);
-
+            _streams.Add(configStream);
             fileStream.Close();
             return new UserInfo(userData[0], userData[1], configStream);
         }
@@ -40,6 +44,10 @@ public class FileDBConnection : IDBConnection
     private FileStream InitializeDatabase()
     {
         string _path = File.ReadLines(path).First();
-        return new FileStream(_path, FileMode.Open);
+        FileStream databaseStream = new FileStream(_path, FileMode.Open);
+        
+        _streams.Add(databaseStream);
+        
+        return databaseStream;
     }
 }

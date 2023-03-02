@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using MetadataApp.ui.ViewModels;
 
 namespace MetadataApp;
@@ -11,9 +12,11 @@ public partial class LogInView : Window
     public LogInView()
     {
         InitializeComponent();
-        Loaded += ViewLoaded;
+        
+        Closing += OnClose;
         DataContext = new LogInViewModel();
-        (DataContext as LogInViewModel).MessageBoxRequest +=
+        (DataContext as ViewModelBase).Close += () => { Close(); };
+        (DataContext as ViewModelBase).MessageBoxRequest +=
             ViewMessageBoxRequest;
     }
 
@@ -22,8 +25,9 @@ public partial class LogInView : Window
         e.Show();
     }
 
-    private void ViewLoaded(object sender, RoutedEventArgs e)
+    private void OnClose(object sender, CancelEventArgs e)
     {
-        if (DataContext is ICloseWindow vm) vm.Close += () => { Close(); };
-    }
+        Closing -= OnClose;
+        (DataContext as ViewModelBase).MessageBoxRequest -= ViewMessageBoxRequest;
+    } 
 }

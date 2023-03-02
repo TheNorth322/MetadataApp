@@ -4,7 +4,17 @@
     <projectFile>MetadataApp/MetadataApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="" />
+    <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MetadataApp/Domain/StreamCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/Interfaces/ICloseWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/ViewModelBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/ViewModelBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/Views/MainView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/Views/MainView.xaml.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

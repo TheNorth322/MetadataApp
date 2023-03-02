@@ -9,8 +9,8 @@ public class ViewModelBase : INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
     public event EventHandler<MessageBoxEventArgs> MessageBoxRequest;
     public event EventHandler<OpenViewEventArgs> OpenNewWindow;
-    public event EventHandler CloseEvent;
 
+    public Action Close { get; set; }
     protected void MessageBox_Show(Action<MessageBoxResult> resultAction, string messageBoxText,
         string caption = "", MessageBoxButton button = MessageBoxButton.OK,
         MessageBoxImage icon = MessageBoxImage.None,

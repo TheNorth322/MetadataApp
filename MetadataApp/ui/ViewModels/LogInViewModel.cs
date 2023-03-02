@@ -5,13 +5,19 @@ using MetadataApp.ui.Views;
 
 namespace MetadataApp.ui.ViewModels;
 
-public class LogInViewModel : ViewModelBase, ICloseWindow
+public class LogInViewModel : ViewModelBase
 {
     private string _login;
 
     private RelayCommand _logInCommand;
     private string _password;
 
+    private StreamCollection _streams;
+
+    public LogInViewModel()
+    {
+       _streams = new StreamCollection();
+    }
     public string Login
     {
         get => _login;
@@ -43,21 +49,20 @@ public class LogInViewModel : ViewModelBase, ICloseWindow
         }
     }
 
-    public Action Close { get; set; }
-
     private void LogIn()
     {
         try
         {
-            Authentificator authentificator = new Authentificator(new FileDBConnection());
+            Authentificator authentificator = new Authentificator(new FileDBConnection(_streams));
             UserInfo userInfo = authentificator.LogIn(Login, Password);
-            ConfigurationParser configurationParser = new ConfigurationParser();
+            ConfigurationParser configurationParser = new ConfigurationParser(_streams);
 
             OpenNewView(new MainView(new MainViewModel(configurationParser.Parse(userInfo.ConfigStream))));
             Close?.Invoke();
         }
         catch (Exception ex)
         {
+            _streams.Close();
             MessageBox_Show(null, ex.Message, "Возникла ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }

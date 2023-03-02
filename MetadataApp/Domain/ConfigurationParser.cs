@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using MetadataApp.Domain.Interfaces;
@@ -8,8 +9,14 @@ namespace MetadataApp.Domain;
 
 public class ConfigurationParser : IConfigurationParser
 {
+    private StreamCollection _streams;
+    public ConfigurationParser(StreamCollection streams)
+    {
+        _streams = streams;
+    }
     public ObservableCollection<MenuItemViewModel> Parse(Stream stream)
     {
+        _streams.Add(stream);
         StreamReader streamReader = new StreamReader(stream);
         ObservableCollection<MenuItemViewModel> menuItemsCollection = new ObservableCollection<MenuItemViewModel>();
         Handler[] handlers = new HandlersInitializer().Initialize();
