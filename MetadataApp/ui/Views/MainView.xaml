@@ -6,7 +6,7 @@
         xmlns:viewmodels="clr-namespace:MetadataApp.ui.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="Университет" Height="450" Width="800">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
     </Window.Resources>

@@ -19,14 +19,6 @@ public class MenuItemViewModel : ViewModelBase
         AvailabilityStatus = availabilityStatus;
     }
 
-    public MenuItemViewModel(string header, bool visibilityStatus, bool availabilityStatus, Handler handler)
-        : this(header, visibilityStatus, availabilityStatus)
-    {
-        Handler = handler;
-        _command = new RelayCommand(_execute => Handler.Func(Handler.Tag),
-            _canExecute => true);
-    }
-
     public RelayCommand Command
     {
         get

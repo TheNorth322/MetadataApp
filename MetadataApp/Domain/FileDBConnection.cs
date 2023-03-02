@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using MetadataApp.Domain.Interfaces;
 
 namespace MetadataApp.Domain;
 
@@ -13,11 +14,15 @@ public class FileDBConnection : IDBConnection
     {
         FileStream fileStream = InitializeDatabase();
         StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8);
+        UserInfoValidator userInfoValidator = new UserInfoValidator();
 
         while (streamReader.ReadLine() is { } line)
         {
             string[] userData = line.Split(' ');
-            if (login != userData[0]) continue;
+            userInfoValidator.Validate(userData);
+            
+            if (login != userData[0])
+                continue;
 
             if (!File.Exists(userData[2]))
                 throw new FileNotFoundException($"File {userData[2]} isn't found");
@@ -34,7 +39,7 @@ public class FileDBConnection : IDBConnection
 
     private FileStream InitializeDatabase()
     {
-        string path = File.ReadLines("database_path.txt").First();
-        return new FileStream(path, FileMode.Open);
+        string _path = File.ReadLines(path).First();
+        return new FileStream(_path, FileMode.Open);
     }
 }

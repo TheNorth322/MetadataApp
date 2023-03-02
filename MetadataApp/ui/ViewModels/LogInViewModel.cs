@@ -64,6 +64,7 @@ public class LogInViewModel : ViewModelBase, ICloseWindow
 
     private bool ValidateData()
     {
+        //return !(String.IsNullOrEmpty(Login) || String.IsNullOrEmpty(Password));
         return true;
     }
 }
