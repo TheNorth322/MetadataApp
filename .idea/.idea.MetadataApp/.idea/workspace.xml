@@ -4,18 +4,30 @@
     <projectFile>MetadataApp/MetadataApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="refactor code">
-      <change afterPath="$PROJECT_DIR$/MetadataApp/Domain/ConfigLineValidator.cs" afterDir="false" />
+    <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MetadataApp/Domain/UserInfoValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6bb614bf8fe445db84f76b5ef556a93148a8/_d965b/INotifyPropertyChanged.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="98a162e6-adcd-4d8b-82d9-ade0786f8063" />
+        <option name="url" value="https://github.com/TheNorth322/MetadataApp.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
