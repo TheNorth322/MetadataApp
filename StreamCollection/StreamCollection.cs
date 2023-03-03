@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Windows.Media;
 
-namespace MetadataApp.Domain;
+namespace StreamCollectionLib;
 
 public class StreamCollection
 {

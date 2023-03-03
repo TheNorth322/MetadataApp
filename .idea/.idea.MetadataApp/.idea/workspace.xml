@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MetadataApp/Domain/StreamCollection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Authentificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/Authentificator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigLineValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigLineValidator/ConfigLineValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/Interfaces/ICloseWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/FileDBConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Handler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Handler/Handler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/HandlersInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/HandlersInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IAutentificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/IAutentificator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/IDBConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IHandlersInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IHandlersInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/PasswordHash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordHash/PasswordHash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/StreamCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCollection/StreamCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/UserInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/UserInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/UserInfoValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/UserInfoValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/MetadataApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/MetadataApp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/ViewModelBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/ViewModelBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/Views/MainView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/Views/MainView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/MenuItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/MenuItemViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d3b35aba78af8938342254c9ab4da7b7362a691ccc71b3decaabd322fea44/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e60b8a28a674789a73bf80f2349c8fd7881cb1ed21fea431b814f1e08598/Convert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thenorth/RiderProjects/MetadataApp/MetadataApp/Domain/Authentificator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

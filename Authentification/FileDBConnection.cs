@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using MetadataApp.Domain.Interfaces;
+using StreamCollectionLib;
 
 namespace MetadataApp.Domain;
 

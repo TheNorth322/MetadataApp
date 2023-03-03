@@ -1,12 +1,11 @@
-﻿using System;
-using MetadataApp.Domain.Interfaces;
+﻿using MetadataApp.Domain.Interfaces;
+using PasswordHashLib;
 
 namespace MetadataApp.Domain;
 
 public class Authentificator : IAutentificator
 {
     private readonly IDBConnection _dbConnection;
-
     public Authentificator(IDBConnection dbConnection)
     {
         _dbConnection = dbConnection ?? throw new ArgumentNullException(nameof(dbConnection));

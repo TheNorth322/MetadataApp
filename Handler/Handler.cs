@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MetadataApp.ui.ViewModels;
+namespace HandlerLib;
 
 public struct Handler
 {

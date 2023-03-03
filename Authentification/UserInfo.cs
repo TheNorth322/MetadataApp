@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MetadataApp.Domain;
 
-public class UserInfo
+public struct UserInfo
 {
     public UserInfo(string login, string passwordHash, Stream configStream)
     {

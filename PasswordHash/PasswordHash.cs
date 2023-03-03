@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MetadataApp.Domain;
+namespace PasswordHashLib;
 
 public sealed class PasswordHash
 {

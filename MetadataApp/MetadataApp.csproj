@@ -15,4 +15,12 @@
         </Page>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Authentification\Authentification.csproj" />
+      <ProjectReference Include="..\ConfigLineValidator\ConfigLineValidator.csproj" />
+      <ProjectReference Include="..\Handler\Handler.csproj" />
+      <ProjectReference Include="..\PasswordHash\PasswordHash.csproj" />
+      <ProjectReference Include="..\StreamCollection\StreamCollection.csproj" />
+    </ItemGroup>
+
 </Project>

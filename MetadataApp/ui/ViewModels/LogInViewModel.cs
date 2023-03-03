@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows;
 using MetadataApp.Domain;
 using MetadataApp.ui.Views;
+using StreamCollectionLib;
 
 namespace MetadataApp.ui.ViewModels;
 
@@ -16,8 +18,12 @@ public class LogInViewModel : ViewModelBase
 
     public LogInViewModel()
     {
-       _streams = new StreamCollection();
+        if (Assembly.Load("Authentification") == null)
+            throw new DllNotFoundException("Authentification dll isn't found.");
+
+        _streams = new StreamCollection();
     }
+
     public string Login
     {
         get => _login;

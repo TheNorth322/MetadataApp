@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using MetadataApp.Domain.Interfaces;
-using MetadataApp.ui.ViewModels;
-
+using HandlerLib;
 namespace MetadataApp.Domain;
 
 public class HandlersInitializer : IHandlersInitializer

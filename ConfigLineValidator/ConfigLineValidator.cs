@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MetadataApp.Domain;
+namespace ConfigLineValidatorLib;
 
 public class ConfigLineValidator
 {
