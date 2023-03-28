@@ -8,6 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Resources\Authentication.png" />
+    </ItemGroup>
+
+    <ItemGroup>
         <Page Update="ui\Views\LogInView.xaml">
             <Generator>MSBuild:Compile</Generator>
             <XamlRuntime>Wpf</XamlRuntime>
@@ -21,6 +25,10 @@
       <ProjectReference Include="..\Handler\Handler.csproj" />
       <ProjectReference Include="..\PasswordHash\PasswordHash.csproj" />
       <ProjectReference Include="..\StreamCollection\StreamCollection.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Resources\Authentication.png" />
     </ItemGroup>
 
 </Project>
