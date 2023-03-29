@@ -5,45 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b2ec76b-f785-4965-883a-71b1d37efc9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MetadataApp/ui/PasswordHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MetadataApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Authentificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/Authentificator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigLineValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigLineValidator/ConfigLineValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/ConfigurationParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/FileDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/FileDBConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Handler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Handler/Handler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/HandlersInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/HandlersInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IAutentificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/IAutentificator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IDBConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/IDBConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IHandlersInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/Domain/Interfaces/IHandlersInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/PasswordHash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordHash/PasswordHash.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/StreamCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StreamCollection/StreamCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/UserInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/UserInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/Domain/UserInfoValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentification/UserInfoValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/MetadataApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/MetadataApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/LogInViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/MenuItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/ViewModels/MenuItemViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MetadataApp/ui/Views/LogInView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70f617fc68cf47c4af27e06f2b56f801b1c8a8/4f/b91f683c/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/908f5aacd054425786d751ac6df94d022c8a8/99/c66ec876/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc7e2bf9a29446e993f511bd8a7f2e19f78888/b6/821b49c2/FrameworkElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e6b119ea36d516b1b8e08c384aa79d834474b7f7387ecbf8f80787217a9/MenuItem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29d413ab2fdd934034e94d91ac54dad4fd453660b2fe63750ffc2b4b22879/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/338efc8c78ffd1de56cecc4647ebd34d18f958c8a0963d89a12b9ea90a4ae/ExceptionWrapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a797ca92a578f6e5ea8cf99e224acee2df4fb7cfbfb0ed1f34a1685a4ddae4/XamlReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7cb6b7c72d108583c026611357d59eb9c29fc5a452d33c863a5a1678613153/Array.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89a2b53da2e32f22f450ecab5f59ea9f03bfe76b409627069931a786fcee/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a6b1457cbcf17db31a383ba49ef9bcc786cf3ef77146d997eee499b27a46d/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d3b35aba78af8938342254c9ab4da7b7362a691ccc71b3decaabd322fea44/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e60b8a28a674789a73bf80f2349c8fd7881cb1ed21fea431b814f1e08598/Convert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/thenorth/RiderProjects/MetadataApp/MetadataApp/Domain/Authentificator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6bb614bf8fe445db84f76b5ef556a93148a8/_d965b/INotifyPropertyChanged.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,9 +41,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\thenorth\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\thenorth\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\thenorth\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\alex2\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\alex2\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\alex2\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -105,8 +82,20 @@
       <workItem from="1677577723275" duration="8362000" />
       <workItem from="1677587133849" duration="142000" />
       <workItem from="1677587292119" duration="2246000" />
-      <workItem from="1677593485135" duration="1988000" />
+      <workItem from="1677593485135" duration="1947000" />
+      <workItem from="1677595700119" duration="129000" />
+      <workItem from="1677634620551" duration="6944000" />
+      <workItem from="1680027696988" duration="23000" />
+      <workItem from="1680054258155" duration="2977000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor code">
+      <created>1677636314769</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677636314769</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
   </component>
 </project>

@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="clr-namespace:MetadataApp.ui.ViewModels"
+        xmlns:ph="clr-namespace:MetadataApp.ui"
         d:DataContext="{d:DesignInstance Type=viewmodels:LogInViewModel}"
         mc:Ignorable="d"
-        Title="Вход" Height="450" Width="800">
+        Title="Вход" MaxHeight="450" MaxWidth="800">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -51,8 +52,8 @@
             <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="#FFFFFF" Content="{StaticResource PasswordHeading}" Height="39" />
 
             <TextBox Grid.Row="0" Style="{StaticResource TextBoxStyle}" Text="{Binding Login}" Margin="15,2,13,2" Grid.Column="1" />
-            <TextBox Grid.Row="1" Style="{StaticResource TextBoxStyle}"
-                     Text="{Binding Password}" Margin="15,1,13,2" Grid.Column="1" />
+            <PasswordBox Grid.Row="1" Style="{StaticResource PasswordBoxStyle}" ph:PasswordHelper.Attach="True"
+                     ph:PasswordHelper.Password="{Binding Password, Mode=TwoWay}" Margin="15,1,13,2" Grid.Column="1" />
         </Grid>
         <Button Grid.Row="2" Content="{StaticResource LogInButtonHeading}" Style="{StaticResource ButtonStyle}" 
                 Command="{Binding LogInCommand}" Grid.Column="2" Background="#FCEC52" Foreground="#27392D" FontFamily="Verdana" FontWeight="ExtraBold" VerticalAlignment="Top" HorizontalAlignment="Center" Height="51" FontSize="16" Margin="0,10,0,0" />

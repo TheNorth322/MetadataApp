@@ -50,7 +50,7 @@ public class LogInViewModel : ViewModelBase
         {
             return _logInCommand ?? (_logInCommand = new RelayCommand(
                 _execute => LogIn(),
-                _canExecute => ValidateData()
+                _canExecute => true
             ));
         }
     }
@@ -71,11 +71,5 @@ public class LogInViewModel : ViewModelBase
             _streams.Close();
             MessageBox_Show(null, ex.Message, "Возникла ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
-    }
-
-    private bool ValidateData()
-    {
-        //return !(String.IsNullOrEmpty(Login) || String.IsNullOrEmpty(Password));
-        return true;
     }
 }
